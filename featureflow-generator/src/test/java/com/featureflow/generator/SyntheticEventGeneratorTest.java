@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 
 class SyntheticEventGeneratorTest {
 
-    private final GeneratorConfig config =
-            GeneratorConfig.builder().userCount(50).songCount(200).eventCount(1_000).build();
+    private final GeneratorConfig config = GeneratorConfig.builder().userCount(50).songCount(200).eventCount(1_000)
+            .build();
 
     @Test
     void sameSeedProducesIdenticalEvents() {

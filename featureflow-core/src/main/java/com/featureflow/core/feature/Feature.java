@@ -7,7 +7,8 @@ import lombok.Builder;
 import lombok.Value;
 
 /**
- * declarative feature definition. this is the single source of truth that both the offline and
+ * declarative feature definition. this is the single source of truth that both
+ * the offline and
  * online engines evaluate, so it must not contain anything engine specific.
  */
 @Value
@@ -23,7 +24,9 @@ public class Feature {
 
     Aggregation aggregation;
 
-    /** the field read by the aggregation, null for aggregations that do not need one */
+    /**
+     * the field read by the aggregation, null for aggregations that do not need one
+     */
     EventField field;
 
     Duration window;

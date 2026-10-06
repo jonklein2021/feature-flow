@@ -12,7 +12,9 @@ import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
 
-/** the one place that chooses concrete infrastructure; swap implementations here */
+/**
+ * the one place that chooses concrete infrastructure; swap implementations here
+ */
 @Module
 public class InfrastructureModule {
 

@@ -5,7 +5,10 @@ import com.featureflow.core.feature.FeatureValue;
 import java.util.Collection;
 import java.util.Map;
 
-/** low latency key-value access to the latest feature values (redis, in-memory map, ...) */
+/**
+ * low latency key-value access to the latest feature values (redis, in-memory
+ * map, ...)
+ */
 public interface OnlineStore {
 
     void put(EntityType entity, String entityKey, FeatureValue value);

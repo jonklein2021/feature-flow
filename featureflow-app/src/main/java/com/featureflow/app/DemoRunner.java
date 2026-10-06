@@ -10,10 +10,12 @@ import java.util.List;
 import javax.inject.Inject;
 import lombok.RequiredArgsConstructor;
 
-/** end to end smoke path: generate events, register features, evaluate them for one user */
+/**
+ * end to end smoke path: generate events, register features, evaluate them for
+ * one user
+ */
 @RequiredArgsConstructor(onConstructor_ = @Inject)
 public class DemoRunner {
-
     private static final long DEMO_USER_ID = 42;
 
     private final SyntheticEventGenerator generator;
@@ -24,8 +26,7 @@ public class DemoRunner {
     public void run() {
         SampleFeatures.all().forEach(registry::register);
 
-        List<ListeningEvent> events =
-                generator.generateEvents(generator.generateCatalog()).toList();
+        List<ListeningEvent> events = generator.generateEvents(generator.generateCatalog()).toList();
         offlineStore.appendEvents(events);
 
         Instant asOf = events.get(events.size() - 1).getTimestamp();

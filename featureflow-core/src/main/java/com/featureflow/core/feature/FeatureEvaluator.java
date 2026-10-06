@@ -8,15 +8,19 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * reference semantics for feature definitions. the offline and online engines must both delegate
- * to this class (or be tested for equivalence against it) so training and serving cannot drift.
+ * reference semantics for feature definitions. the offline and online engines
+ * must both delegate
+ * to this class (or be tested for equivalence against it) so training and
+ * serving cannot drift.
  *
- * <p>rules:
+ * <p>
+ * rules:
  * <ul>
- *   <li>the window is half open: (asOf - window, asOf], so an event exactly at asOf counts and an
- *       event exactly at the window start does not
- *   <li>events after asOf never contribute, which is what prevents future leakage
- *   <li>events sharing an eventId are counted once
+ * <li>the window is half open: (asOf - window, asOf], so an event exactly at
+ * asOf counts and an
+ * event exactly at the window start does not
+ * <li>events after asOf never contribute, which is what prevents future leakage
+ * <li>events sharing an eventId are counted once
  * </ul>
  */
 public final class FeatureEvaluator {

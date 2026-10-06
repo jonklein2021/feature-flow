@@ -61,11 +61,11 @@ class FeatureEvaluatorTest {
     @Test
     void featureWithoutRequiredFieldIsRejected() {
         assertThatThrownBy(() -> Feature.builder()
-                        .name("bad")
-                        .entity(EntityType.USER)
-                        .aggregation(Aggregation.SUM)
-                        .window(Duration.ofDays(1))
-                        .build())
+                .name("bad")
+                .entity(EntityType.USER)
+                .aggregation(Aggregation.SUM)
+                .window(Duration.ofDays(1))
+                .build())
                 .isInstanceOf(IllegalArgumentException.class);
     }
 

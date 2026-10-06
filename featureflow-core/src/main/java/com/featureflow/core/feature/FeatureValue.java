@@ -10,6 +10,9 @@ public class FeatureValue {
     int featureVersion;
     Number value;
 
-    /** the cutoff the value was computed for; only events at or before this instant contributed */
+    /**
+     * the cutoff the value was computed for; only events at or before this instant
+     * contributed
+     */
     Instant asOf;
 }

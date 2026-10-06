@@ -8,6 +8,8 @@ public interface EventStream {
 
     void publish(ListeningEvent event);
 
-    /** registers a handler that receives every event published after subscription */
+    /**
+     * registers a handler that receives every event published after subscription
+     */
     void subscribe(Consumer<ListeningEvent> handler);
 }

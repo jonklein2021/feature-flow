@@ -18,15 +18,18 @@ import lombok.RequiredArgsConstructor;
 /**
  * produces a reproducible catalog and listening history.
  *
- * <p>this is a deliberately simple first model: uniform entity popularity, fixed event type
- * weights and strictly increasing timestamps. realism (popularity skew, sessions, late and
+ * <p>
+ * this is a deliberately simple first model: uniform entity popularity, fixed
+ * event type
+ * weights and strictly increasing timestamps. realism (popularity skew,
+ * sessions, late and
  * duplicate events) is meant to be layered on here.
  */
 @RequiredArgsConstructor
 public class SyntheticEventGenerator {
 
-    private static final String[] GENRES = {"rock", "pop", "jazz", "hip-hop", "electronic", "classical"};
-    private static final String[] COUNTRIES = {"US", "GB", "DE", "BR", "JP", "IN"};
+    private static final String[] GENRES = { "rock", "pop", "jazz", "hip-hop", "electronic", "classical" };
+    private static final String[] COUNTRIES = { "US", "GB", "DE", "BR", "JP", "IN" };
     private static final int SONGS_PER_ALBUM = 10;
 
     private final GeneratorConfig config;
@@ -76,7 +79,8 @@ public class SyntheticEventGenerator {
     }
 
     /**
-     * lazily generates events in timestamp order. the stream is stateful, so consume it once and
+     * lazily generates events in timestamp order. the stream is stateful, so
+     * consume it once and
      * call this method again for a fresh, identical sequence.
      */
     public Stream<ListeningEvent> generateEvents(Catalog catalog) {

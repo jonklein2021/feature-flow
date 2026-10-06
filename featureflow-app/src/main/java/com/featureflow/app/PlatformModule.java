@@ -7,7 +7,10 @@ import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
 
-/** bindings for platform logic and tooling that do not depend on a specific infrastructure */
+/**
+ * bindings for platform logic and tooling that do not depend on a specific
+ * infrastructure
+ */
 @Module
 public class PlatformModule {
 
