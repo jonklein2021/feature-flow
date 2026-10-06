@@ -60,7 +60,8 @@ feature-flow/
 └── featureflow-app/           composition root (Dagger wiring) and demo entry point
 ```
 
-Dependencies point inward: `infra-local`, `generator`, and `app` depend on `core`; `core` depends on no other module.
+- Dependencies point inward: `infra-local`, `generator`, and `app` depend on `core`
+- `core` depends on no other module.
 
 ### featureflow-core
 
